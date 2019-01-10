@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Forms </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial- scale=1">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+
+<body>
+
+	<h1>Register</h1>
+
+	<form action="" method="">
+
+		<div>
+			<label for="first_name">First Name:</label>
+			<input type="text" id="first_name" placeholder="John" required>
+
+			<label for="last_name">Last Name:</label>
+			<input type="text" id="last_name" placeholder="Smith" required>
+		</div>
+
+		<div>
+			<label for="gender"></label>
+			<label for="male">Male</label>
+			<input type="radio" name="gender" id="male" value="M">
+
+			<label for="female">Female</label>
+			<input type="radio" name="gender" id="female" value="F">
+
+			<label for="other">Other</label>
+			<input type="radio" name="gender" id="other" value="O">
+		</div>
+
+		<div>
+			<label for="email">Email:</label>
+			<input id="email" name="email" type="email" placeholder="your email" required>
+
+			<label for="password">Password:</label>
+			<input id="password" name="password" type="password" placeholder="your password" minlength="5" maxlength="10" required>
+		</div>
+
+		<div>
+			<select name="month" id="">
+				<option value="">Month</option>
+				<option value="JAN">JAN</option>
+				<option value="FEB">FEB</option>
+				<option value="MAR">MAR</option>
+				<option value="APR">APR</option>
+				<option value="MAY">MAY</option>
+				<option value="JUN">JUN</option>
+				<option value="JUL">JUL</option>
+				<option value="AUG">AUG</option>
+				<option value="SEP">SEP</option>
+				<option value="OCT">OCT</option>
+				<option value="NOV">NOV</option>
+				<option value="DEC">DEC</option>
+			</select>
+
+			<select name="day" id="">
+				<option value="">Day</option>
+				<option value="1">1</option>
+			</select>
+
+			<select name="year" id="">
+				<option value="">Year</option>
+				<option value="1990">1990</option>
+			</select>
+		</div>
+
+		<div>
+			<label for="terms">I agree to the terms and conditions</label>
+			<input type="checkbox" name="" id="terms">
+		</div>
+
+		<input type="submit">
+
+	</form>
+
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>
