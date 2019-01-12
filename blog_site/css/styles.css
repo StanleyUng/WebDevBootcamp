@@ -1,0 +1,15 @@
+/* font-family: 'ZCOOL KuaiLe', cursive; */
+
+body {
+    /* background: red; */
+    font-family: 'ZCOOL KuaiLe', cursive;
+    border: 20px solid grey;
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+}
+
+div p:nth-of-type(2){
+    border-left: 4px solid grey;
+    padding-left: 20px;;
+}
