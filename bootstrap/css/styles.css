@@ -1,6 +1,10 @@
 body {
     padding-top: 70px;
-    background: lightskyblue;
+    background: #5887CF;
+}
+
+.jumbotron {
+    color: #FA7298;
 }
 
 .navbar {
