@@ -1,0 +1,23 @@
+body {
+    background: url(https://avatars.mds.yandex.net/get-pdb/1016500/66c64764-25dc-44d9-907d-524a543d15cd/s1200);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+#content {
+    text-align: center;
+    padding-top: 25%;
+}
+
+hr {
+    width: 100px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0, 0, 0, .2)
+}
