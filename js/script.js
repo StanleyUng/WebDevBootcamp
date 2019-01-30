@@ -11,3 +11,12 @@
 //     isBlue = !isBlue;
 // }, 
 // 1000);
+
+// var button = document.querySelector("button");
+// var text = document.querySelectorAll("p");
+
+// button.addEventListener("click", function(){
+//     text.forEach(p => {
+//         p.textContent = "Someone clicked this man"; 
+//     });
+// });

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title> Practice Site </title>
+	<title> JS Practice Site </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial- scale=1">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -10,8 +10,13 @@
 	<style type="text/css">
 		/* For debugging */
 		body {
+			background-color: hotpink;
 			margin-left: 100px;
 			margin-right: 100px;
+		}
+
+		.winner {
+			color: aquamarine;
 		}
 	</style>
 
@@ -19,33 +24,64 @@
 
 <body>
 
-	<h1 id="article_title"> Random Ass Article Title </h1>
+	<h1 id="article_title"> Score Keeping </h1>
 
-	<div class="content">
-		<p>
-			Lorem ipsum dolor amet etsy shaman kitsch cardigan kale chips williamsburg ennui cloud bread. Iceland ugh skateboard, plaid activated charcoal selfies mustache single-origin coffee pork belly chicharrones flannel 8-bit. Health goth direct trade edison bulb gastropub 90's. Ramps small batch affogato, kinfolk dreamcatcher coloring book cloud bread helvetica live-edge.
-		</p>
+	<h1>
+		<div id="player_one_score"> 0 </div>
+		to
+		<div id="player_two_score"> 0 </div>
+	</h1>
 
-		<p>
-			Venmo hella butcher distillery, dreamcatcher iceland ramps vinyl viral mixtape skateboard. Slow-carb live-edge ugh lo-fi four dollar toast polaroid flannel ethical put a bird on it squid copper mug. Woke taiyaki asymmetrical forage raclette health goth live-edge banjo. Retro unicorn kickstarter yuccie. Brunch pinterest stumptown, fixie pork belly copper mug four loko. Messenger bag pork belly organic artisan cray chicharrones. Shaman hella affogato before they sold out iPhone bespoke.
-		</p>
-
-		<p>
-			Pour-over tbh try-hard ramps man bun drinking vinegar typewriter tumeric austin tilde truffaut disrupt. Shabby chic kitsch post-ironic tattooed, 90's chillwave pour-over sriracha fixie banjo mustache. Thundercats cardigan gluten-free sustainable aesthetic, etsy squid af meditation snackwave migas single-origin coffee pork belly kogi. Cronut pickled mustache paleo listicle mumblecore.
-		</p>
-
-		<p>
-			Small batch tacos salvia ethical bitters umami health goth leggings subway tile godard letterpress. Pok pok selfies man braid try-hard YOLO. Hella kinfolk vice umami YOLO green juice franzen iceland small batch readymade. Cornhole meggings franzen, wolf kinfolk gochujang meditation umami. Pickled succulents chia, kickstarter vinyl hammock mumblecore leggings tilde drinking vinegar street art thundercats photo booth.
-		</p>
-	</div>
-
-	<ul>
-		<li class="highlight"> Highlight me bby </li>
-		<li class="bold"> bold me bby </li>
-		<li class="highlight"> NEON LIGHTZ </li>
-	</ul>
+	<input type="number" name="quantity" min="1" max="5">
+	<button id="player_one_button"> Player 1 </button>
+	<button id="player_two_button"> Player 2 </button>
+	<button id="reset_button"> Reset </button>
 
 	<script type="text/javascript" src="js/script.js"></script>
+	<script>
+		// For Debugging
+		var playerOneButton = document.getElementById("player_one_button");
+		var playerTwoButton = document.getElementById("player_two_button");
+		var resetButton = document.getElementById("reset_button");
+
+		var playerOneScore = document.getElementById("player_one_score");
+		var playerTwoScore = document.getElementById("player_two_score");
+
+		var max = document.querySelector("input").max;
+
+		var gameOver = false;
+
+		playerOneButton.addEventListener("click", function () {
+
+			if (gameOver) {
+				return;
+			}
+
+			if (playerOneScore != max) {
+				var num = parseInt(playerOneScore.innerHTML, 10);
+				num += 1;
+				playerOneScore.innerHTML = num;
+			} else {
+				playerOneScore.style.color = "green";
+			}
+
+
+		});
+
+		playerTwoButton.addEventListener("click", function () {
+			var num = parseInt(playerTwoScore.innerHTML, 10);
+			num += 1;
+			playerTwoScore.innerHTML = num;
+		});
+
+		resetButton.addEventListener("click", reset);
+
+		function reset() {
+			playerOneScore.innerHTML = 0;
+			playerTwoScore.innerHTML = 0;
+		}
+
+	</script>
 </body>
 
 </html>
