@@ -1,17 +1,58 @@
+/* font-family: 'Roboto', sans-serif; */
+
+html {
+    font-family: 'Roboto', sans-serif; 
+}
+
 body {
     background-color: #232323;
-    color: white;
+    /* color: white; */
+    text-transform: uppercase;
 }
 
 .square {
     width: 30%;
-    background-color: blueviolet;
     padding-bottom: 30%;
     float: left;
     margin: 1.66%;
+    border-radius: 10px;
 }
 
 #container {
     margin: 0 auto;
     max-width: 600px;
+}
+
+#nav {
+    background-color: white;
+    height: 46px;
+    text-align: center;
+}
+
+#header {
+    text-align: center;
+    margin: 0;
+    padding: 30px 30px;
+    background-color: steelblue;
+}
+
+.selected {
+    background-color: steelblue;
+    color: white;
+}
+
+button {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold;
+    background-color: white;
+    color: steelblue;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+button:hover {
+    background-color: greenyellow;
 }

@@ -7,18 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Color Guessing Game</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="colorgame.css">
 </head>
 
 <body>
 
-    <h1>Color Game <span id="colorDisplay">RGB</span></h1>
+    <h1 id="header">
+        Color Game 
+        <br>
+        <span id="colorDisplay">RGB</span>
+    </h1>
 
-    <div id="stripe">
+    <div id="nav">
         <button id="reset">New Colors</button>
         <span id="message">Take a guess</span>
-        <button class="mode">Easy</button>
-        <button class="mode selected">Hard</button>
+        <button id="easy_button" class="mode">Easy</button>
+        <button id="hard_button" class="mode selected">Hard</button>
     </div>
 
     <div id="container">
