@@ -1,3 +1,39 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
-    
+    background: #20262E;
+    padding: 20px;
+}
+
+#banner {
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    transition: all 0.2s;
+    margin: 0 auto;
+    width: 300px;
+}
+
+button {
+    background: #0084ff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 14px;
+    font-size: 15px;
+    color: #fff;
+}
+
+#banner.alt button {
+    background: #fff;
+    color: #000;
+}
+
+.item {
+    background-color: aquamarine;
+    border: 1px solid red;
+    width: auto;
 }
