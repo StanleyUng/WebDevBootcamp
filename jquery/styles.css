@@ -7,7 +7,7 @@ body {
     padding: 20px;
 }
 
-#banner {
+#container {
     background: #fff;
     border-radius: 4px;
     padding: 20px;
@@ -15,11 +15,11 @@ body {
     text-align: center;
     transition: all 0.2s;
     margin: 0 auto;
-    width: 300px;
+    width: 500px;
 }
 
 button {
-    background: #0084ff;
+    background: #FC00FF;
     border: none;
     border-radius: 5px;
     padding: 8px 14px;
@@ -36,4 +36,14 @@ button {
     background-color: aquamarine;
     border: 1px solid red;
     width: auto;
+}
+
+li {margin: auto;
+    border: 2px #FC00FF solid; 
+    list-style-type: none;
+}
+
+li input {
+    float: left;
+    margin: 5px 5px;
 }

@@ -9,34 +9,31 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <button id="textBtn"> Add More </button>
 
-    <div id="banner">
+    <div id="container">
         <h1> Shopping List </h1>
-        <button> Buy that shit </button>
+        <input type="text" id="item" placeholder="What do you want to buy?">
 
-        <ol>
-            <div class="item">
+        <button id="btn"> Buy that shit </button>
 
-            </div>
-        </ol>
-
-        <select id="single">
-            <option>Single</option>
-            <option>Single2</option>
-        </select>
-
-        <select id="multiple" multiple="multiple">
-            <option selected="selected">Multiple</option>
-            <option>Multiple2</option>
-            <option selected="selected">Multiple3</option>
-        </select>
-
+        <ul id="list">
+            <li>
+                <span></span>
+                <input type="checkbox">
+                Gucci Wallet
+            </li>
+            <li><input type="checkbox">Gucci Shirt</li>
+            <li><input type="checkbox">Supreme Hoodie</li>
+            <li><input type="checkbox">Jordan 1's</li>
+        </ul>
     </div>
+
 
     <script type="text/javascript" src="scripts.js"></script>
 </body>
