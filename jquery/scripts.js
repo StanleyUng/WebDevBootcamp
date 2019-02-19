@@ -3,7 +3,7 @@ if (!jQuery) {
 }
 
 var styles = {
-    color : "red",
+    color: "red",
     background: "pink",
     border: "1px solid red"
 };
@@ -18,24 +18,55 @@ var styles = {
 // $(".highlight").css("width", "200px");
 // $("#third").css("border", "1px solid orange");
 
+var allSpans = $("span");
+
 var btn = document.getElementById("btn");
 
-btn.addEventListener("click", function(){
-    $("#list").append("<li>" + $("#item").val() + "</li>");
+btn.addEventListener("click", function () {
+    var item = $("#item").val();
+    if (item !== "") {
+        //$("#list").append("<li>" + $("#item").val() + "</li>");
+        $("#list").append("<li><span>X</span><input type=\"checkbox\">" + $("#item").val() + "</li>")
+        allSpans = $("span");
+    }
 });
 
 
-$("li").hover(
-    function() {
-        $(this).css("margin", "7px");
-    },
-    function() {
-        $(this).css("margin", "auto");
-    }
-);
+// $("li").hover(
+//     // While hovering
+//     function () {
+//         $(this).css("margin", "7px");
+//     },
+//     // No longer hovering
+//     function () {
+//         $(this).css("margin", "auto");
+//     }
+// );
 
 var item = $("li input");
 
 if (item.is(":checked")) {
-    
+
 }
+
+// When an li inside of a ul is clicked, run this code
+$("ul").on("click", "li", function(){
+    $(this).toggleClass("task-completed");
+});
+
+$("ul").on("click", "span", function(){
+    $(this).parent().fadeOut(500, function () {
+        $(this).remove();
+    });
+    event.stopPropagation();
+});
+
+$("input[type='text']").keypress(function (event) {
+
+    if (event.which === 13) {
+        var item = $("#item").val();
+        if (item !== "") {
+            $("#list").append("<li><span>X</span><input type=\"checkbox\">" + item.val() + "</li>");
+        }
+    }
+});

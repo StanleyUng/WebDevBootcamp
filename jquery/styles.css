@@ -8,13 +8,13 @@ body {
 }
 
 #container {
-    background: #fff;
+    background: #f7f7f7;
     border-radius: 4px;
     padding: 20px;
     font-size: 25px;
     text-align: center;
     transition: all 0.2s;
-    margin: 0 auto;
+    margin: 100px auto;
     width: 500px;
 }
 
@@ -27,23 +27,22 @@ button {
     color: #fff;
 }
 
-#banner.alt button {
-    background: #fff;
-    color: #000;
-}
-
 .item {
     background-color: aquamarine;
     border: 1px solid red;
     width: auto;
 }
 
-li {margin: auto;
-    border: 2px #FC00FF solid; 
+li {
+    margin: auto;
+    border: 2px #FC00FF solid;
     list-style-type: none;
 }
 
-li input {
+li span {
     float: left;
-    margin: 5px 5px;
+}
+
+.task-completed {
+    text-decoration: line-through;
 }
