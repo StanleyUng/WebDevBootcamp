@@ -26,7 +26,7 @@ btn.addEventListener("click", function () {
     var item = $("#item").val();
     if (item !== "") {
         //$("#list").append("<li>" + $("#item").val() + "</li>");
-        $("#list").append("<li><span>X</span><input type=\"checkbox\">" + $("#item").val() + "</li>")
+        $("#list").append("<li><span>X</span>" + $("#item").val() + "</li>")
         allSpans = $("span");
     }
 });
