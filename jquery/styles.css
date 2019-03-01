@@ -5,10 +5,17 @@ html {
 body {
     background: #20262E;
     padding: 20px;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC00FF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC00FF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 h1 {
     background-color: #FC00FF;
+    border-radius: 5px;
     margin: 0;
 }
 
@@ -19,7 +26,7 @@ h1 {
     font-size: 25px;
     text-align: center;
     transition: all 0.2s;
-    margin:  auto;
+    margin: auto;
     width: 500px;
     box-shadow: 0 0 0 rgba(255, 255, 0, 0.1);
 }
@@ -31,7 +38,7 @@ button {
     padding: 8px 14px;
     font-size: 15px;
     color: #fff;
-    margin: 2px;
+    margin: 2px 2px;
 }
 
 #btn {
@@ -48,6 +55,7 @@ input {
     width: 100%;
     padding: 13px 13px 13px 20px;
     box-sizing: border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
 }
 
 input:focus {
@@ -74,6 +82,22 @@ li:nth-child(2n) {
 
 li span {
     float: left;
+}
+
+span {
+    background-color: #6A82FB;
+    color: white;
+    text-align: center;
+    /* margin-right: 10px; */
+    width: 0px;
+    opacity: 0;
+    display: inline-block;
+    transition: 0.2s linear;
+}
+
+li:hover span {
+    width: 40px;
+    opacity: 1;
 }
 
 .task-completed {

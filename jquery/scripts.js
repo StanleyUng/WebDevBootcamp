@@ -26,7 +26,7 @@ btn.addEventListener("click", function () {
     var item = $("#item").val();
     if (item !== "") {
         //$("#list").append("<li>" + $("#item").val() + "</li>");
-        $("#list").append("<li><span>X</span>" + $("#item").val() + "</li>")
+        $("#list").append("<li><span><i class=\"fas fa-bomb\"></i></span>" + $("#item").val() + "</li>")
         allSpans = $("span");
     }
 });
@@ -70,3 +70,7 @@ $("input[type='text']").keypress(function (event) {
         }
     }
 });
+
+// $().click(function(){
+
+// });
