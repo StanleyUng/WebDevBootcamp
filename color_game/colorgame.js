@@ -9,20 +9,37 @@ var h1 = document.getElementById("header");
 
 var easyBtn = document.getElementById("easy_button");
 var hardBtn = document.getElementById("hard_button");
+var newColorBtn = document.getElementById("reset");
 
 var pickedColor;
 
-
 var testDisplay = document.getElementById("clickedColor");
 
-var newColorButton = document.getElementById("reset");
+var isHard;
 
 // Button Event Listeners
-newColorButton.addEventListener("click", resetColors);
+//newColorBtn.addEventListener("click", resetColors, 6);
+
+newColorBtn.addEventListener("click", function() {
+
+    if (!isHard) {
+        for (var i = squares.length/2; i < squares.length; i++) {
+            squares[i].style.display = "none";
+        }
+        resetColors(3);
+    } else {
+        for (var i = 0; i < squares.length; i++) {
+            squares[i].style.display = "block";
+        }
+        resetColors(6);
+    }
+
+});
 
 easyBtn.addEventListener("click", function() {
     easyBtn.classList.add("selected");
     hardBtn.classList.remove("selected");
+    isHard = false;
 
     for (var i = squares.length/2; i < squares.length; i++) {
         squares[i].style.display = "none";
@@ -34,6 +51,7 @@ easyBtn.addEventListener("click", function() {
 hardBtn.addEventListener("click", function() {
     easyBtn.classList.remove("selected");
     hardBtn.classList.add("selected");
+    isHard = true;
 
     for (var i = 0; i < squares.length; i++) {
         squares[i].style.display = "block";
@@ -94,7 +112,7 @@ function randomColor() {
 }
 
 /**
- * 
+ * Each index of the color array becomes a new color
  */
 function newColors() {
     for (var i = 0; i < colors.length; i++) {
@@ -108,12 +126,12 @@ function newColors() {
 function resetColors(numOfColors) {
     h1.style.backgroundColor = defaultColor;
     newColors();
+
     for (var i = 0; i < colors.length; i++) {
         squares[i].style.backgroundColor = colors[i];
     }
 
     pickedColor = colors[Math.floor(Math.random() * numOfColors)];
     colorDisplay.textContent = pickedColor;
+    message.textContent = "Take a guess"
 }
-
-//
